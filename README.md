@@ -7,4 +7,4 @@ Currently, it is tuned to render publications from [The Institute for the Study 
 * `/add_feed` - adds an RSS feed to a channel.
 * `/list_feeds` - lists all RSS feeeds.
 * `/remove_feed` - removes an RSS feed.
-* `!sync or /sync` - syncs commands to the server.
+* `!sync` or `/sync` - syncs commands to the server.

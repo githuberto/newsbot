@@ -61,6 +61,11 @@ class LoaderBot(commands.Bot):
     guild_list = ", ".join(map(str, guilds))
     await log(f"Cog load complete. Running in: {guild_list}")
 
+    if self.user:
+      perms = discord.Permissions(view_channel=True, send_messages=True)
+      oauth_url = discord.utils.oauth_url(self.user.id, permissions=perms)
+      await log(f"Add this bot to servers using: {oauth_url}")
+
 
 async def main():
   discord.utils.setup_logging()
